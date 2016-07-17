@@ -20,7 +20,7 @@
 		<artifactId>spring-boot-dependencies</artifactId> <version>1.2.3.RELEASE</version> 
 		<type>pom</type> <scope>import</scope> </dependency> </dependencies> </dependencyManagement> -->
 
-	<!-- Changing the Java version  -->
+	<!-- Changing the Java version -->
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -29,19 +29,41 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency> 
+		</dependency>
+
+		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 
+		<!-- Enabling production-ready features -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
-	</dependencies> 
+		<!-- Spring Security -->
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
+			</dependency> -->
+
+		<!-- Using Jolokia for JMX over HTTP -->
+		<!-- <dependency> <groupId>org.jolokia</groupId> <artifactId>jolokia-core</artifactId> 
+			</dependency> -->
+
+		<!-- Monitoring and management using a remote shell  -->
+		<!-- 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-remote-shell</artifactId> 
+		</dependency>
+		 -->
+	</dependencies>
 
 
 	<!-- Allow access to Spring milestones and snapshots -->
 	<!-- (you don't need this if you are using anything after 0.5.0.RELEASE) -->
-	
+
 	<repositories>
 		<repository>
 			<id>spring-snapshots</id>
@@ -58,7 +80,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
-  
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-snapshots</id>
@@ -77,5 +99,5 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build> 
+	</build>
 </project>
